@@ -14,7 +14,7 @@ export class App extends Component {
     bad: 0,
   };
 
-  incrementFeedback = type => {
+  handleClick = type => {
     this.setState(prevState => ({ [type]: prevState[type] + 1 }));
   };
 
@@ -38,7 +38,7 @@ export class App extends Component {
         <Section title="Please leave your feedback">
           <FeedbackOptions
             options={['good', 'neutral', 'bad']}
-            onLeaveFeedback={this.incrementFeedback}
+            onLeaveFeedback={this.handleClick}
           />
         </Section>
 
